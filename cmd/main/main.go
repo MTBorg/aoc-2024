@@ -8,6 +8,7 @@ import (
 
 	"github.com/MTBorg/aoc-2024/internal/day1"
 	"github.com/MTBorg/aoc-2024/internal/day2"
+	"github.com/MTBorg/aoc-2024/internal/day3"
 )
 
 type DayFunc = func(inputData []byte)
@@ -15,6 +16,7 @@ type DayFunc = func(inputData []byte)
 var days = map[string]DayFunc{
 	"1": day1.Day1,
 	"2": day2.Day2,
+	"3": day3.Day3,
 }
 
 func main() {
