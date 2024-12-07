@@ -46,3 +46,24 @@ func Count[T any](vs []T, pred func(T) bool) int {
 	}
 	return count
 }
+
+func MaxInt(a, b int) int {
+	return int(math.Max(float64(a), float64(b)))
+}
+
+func ArrayTranspose[T any](arr [][]T) [][]T {
+	if len(arr) == 0 {
+		return arr
+	}
+	transposed := make([][]T, len(arr[0]))
+	for i := range transposed {
+		transposed[i] = make([]T, len(arr))
+	}
+
+	for i, row := range arr {
+		for j, val := range row {
+			transposed[j][i] = val
+		}
+	}
+	return transposed
+}
